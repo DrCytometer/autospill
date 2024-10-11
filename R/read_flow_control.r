@@ -138,7 +138,7 @@ read.flow.control <- function( control.dir, control.def.file, asp )
         match( flow.scatter.and.marker.original, flow.set.marker ) ]
 
     check.critical( ! anyDuplicated( flow.scatter.and.marker ),
-        "internal error: corrected names for dyes collide" )
+        "internal error: corrected names for dyes overlap" )
 
     # set labels for scatter parameters and markers
 
@@ -156,12 +156,13 @@ read.flow.control <- function( control.dir, control.def.file, asp )
     # read fcs files
 
     flow.set <- lapply( flow.file.name, function( ff )
-        read.FCS( file.path( control.dir, ff ), transformation = NULL ) )
+        read.FCS( file.path( control.dir, ff ), transformation = NULL,
+                truncate_max_range = FALSE ) )
 
     # get range of fcs data
 
     flow.set.resolution.read <- sapply( flow.set, function( fs )
-        as.numeric( description( fs )[["$P1R" ]] ) )
+        as.numeric( keyword( fs )[["$P1R" ]] ) )
 
     check.critical( all( sapply( flow.set.resolution.read, length ) == 1 ),
         "keyword $P1R not found in fcs data" )
