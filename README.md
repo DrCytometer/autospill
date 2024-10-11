@@ -20,7 +20,7 @@ use the function `install_github` in the
 ```R
 library( devtools )
 
-install_github( "carlosproca/autospill" )
+install_github( "DrCytometer/autospill" )
 ```
 
 
