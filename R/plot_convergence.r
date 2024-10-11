@@ -62,13 +62,13 @@ plot_convergence <- function( convergence.log, popnegpop.slope, asp )
             shape = .data$scale ) ) +
         labs( x = "Iteration", y = "Absolute compensation error" ) +
         geom_hline( yintercept = asp$rs.delta.threshold.untr,
-            size = asp$figure.convergence.line.size,
+            linewidth = asp$figure.convergence.line.size,
             linetype = "dashed" ) +
         geom_hline( yintercept = asp$rs.delta.threshold.tran,
-            size = asp$figure.convergence.line.size,
+            linewidth = asp$figure.convergence.line.size,
             linetype = "dashed" ) +
         geom_hline( yintercept = asp$rs.delta.threshold.change,
-            size = asp$figure.convergence.line.size,
+            linewidth = asp$figure.convergence.line.size,
             linetype = "dashed" ) +
         geom_point( aes( y = .data$delta ),
             size = asp$figure.convergence.point.size,
