@@ -28,7 +28,7 @@ fit.robust.linear.model <- function( x.data, y.data, x.name, y.name, asp )
     }
     else
     {
-        cat( sprintf( "WARNING: rlm of %s ~ %s did not converge - then using ols\n",
+        cat( sprintf( "WARNING: rlm of %s ~ %s did not converge - using ols instead\n",
             y.name, x.name ), file = stderr() )
 
         xy.model <- lm( y ~ x, xy.data )
