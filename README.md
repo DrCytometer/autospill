@@ -41,6 +41,26 @@ library( autospill )
 Please see the example scripts in the `batch` folder after installing the 
 package. 
 
+```R
+library( autospill )
+
+fcs.control.dir <- "../single_stained_controls"
+control.def.file <- "../fcs_control_file.csv"
+
+asp <- get.autospill.param( "final.step" )
+
+flow.control <- read.flow.control( fcs.control.dir, control.def.file, asp )
+
+flow.gate <- gate.flow.data( flow.control, asp )
+
+marker.spillover.unco.untr <- get.marker.spillover( TRUE, flow.gate, flow.control, asp )
+marker.spillover.unco.tran <- get.marker.spillover( FALSE, flow.gate, flow.control, asp )
+
+refine.spillover.result <- refine.spillover( marker.spillover.unco.untr, marker.spillover.unco.tran,
+                                                       flow.gate, flow.control, asp )
+
+```
+
 The scripts `calculate_compensation_paper.r` and 
 `calculate_compensation_paper.sh` can be used to reproduce the results of 
 AutoSpill for single-color controls appearing in the paper above. 
