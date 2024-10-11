@@ -61,6 +61,10 @@ refine.spillover.result <- refine.spillover( marker.spillover.unco.untr, marker.
 
 ```
 
+To convert the spillover csv file to an mtx compensation file for use in FlowJo, 
+use the `convert_spillover_to_flowjo` script, provided both for R and Python
+in the `batch` folder.
+
 The scripts `calculate_compensation_paper.r` and 
 `calculate_compensation_paper.sh` can be used to reproduce the results of 
 AutoSpill for single-color controls appearing in the paper above. 
