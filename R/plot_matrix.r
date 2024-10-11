@@ -59,7 +59,7 @@ plot.matrix <- function( the.matrix, by.rows, figure.dir, figure.file.label,
                 stroke = 0.1 * asp$figure.matrix.point.size,
                 color = data.ggp$z ) +
             geom_hline( yintercept = 0, linetype = "dashed",
-                size = asp$figure.matrix.line.size ) +
+                linewidth = asp$figure.matrix.line.size ) +
             labs( x = "", y = "" ) +
             plot.x.axis +
             theme_bw() +
@@ -99,7 +99,7 @@ plot.matrix <- function( the.matrix, by.rows, figure.dir, figure.file.label,
                     stroke = 0.1 * asp$thumbnail.matrix.point.size,
                     color = data.ggp$z ) +
                 geom_hline( yintercept = 0, linetype = "dashed",
-                    size = asp$thumbnail.matrix.line.size ) +
+                    linewidth = asp$thumbnail.matrix.line.size ) +
                 labs( x = "", y = "" ) +
                 plot.x.axis +
                 theme_bw() +
