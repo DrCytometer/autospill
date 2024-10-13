@@ -119,7 +119,7 @@ plot.matrix <- function( the.matrix, by.rows, figure.dir, figure.file.label,
                     axis.text.y = element_text(
                         size = asp$thumbnail.axis.text.size ),
                     panel.border = element_rect(
-                        size = asp$thumbnail.panel.line.size,
+                        linewidth = asp$thumbnail.panel.line.size,
                         fill = NA ),
                     panel.grid.major = element_blank(),
                     panel.grid.minor = element_blank() )
