@@ -80,7 +80,7 @@ plot.matrix <- function( the.matrix, by.rows, figure.dir, figure.file.label,
                 axis.title = element_text( size =
                         asp$figure.axis.title.size ),
                 panel.border = element_rect(
-                    size = asp$figure.panel.line.size, fill = NA ),
+                    linewidth = asp$figure.panel.line.size, fill = NA ),
                 panel.grid.major = element_blank(),
                 panel.grid.minor = element_blank() )
 
