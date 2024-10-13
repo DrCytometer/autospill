@@ -75,10 +75,10 @@ plot.gate <- function( gate.stage, samp, gate.data, gate.marker, gate.bound,
             legend.margin = margin( asp$figure.gate.bar.margin,
                 asp$figure.gate.bar.margin, asp$figure.gate.bar.margin,
                 asp$figure.gate.bar.margin ),
-            axis.ticks = element_line( size = asp$figure.panel.line.size ),
+            axis.ticks = element_line( linewidth = asp$figure.panel.line.size ),
             axis.text = element_text( size = asp$figure.axis.text.size ),
             axis.title = element_text( size = asp$figure.axis.title.size ),
-            panel.border = element_rect( size = asp$figure.panel.line.size ),
+            panel.border = element_rect( linewidth = asp$figure.panel.line.size ),
             panel.grid.major = element_blank(),
             panel.grid.minor = element_blank() )
 
